@@ -9,7 +9,7 @@ class MicropostsController < ApplicationController
       redirect_to root_url
     else
       flash.now[:danger] = "投稿失敗"
-      @microposts = current_user.microposts.order(id: :desc).page(params[:page])
+      @microposts = current_user.feed_microposts.order(id: :desc).page(params[:page])
       render 'toppages/index'
     end
   end

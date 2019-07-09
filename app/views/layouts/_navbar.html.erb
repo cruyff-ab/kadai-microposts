@@ -18,6 +18,9 @@
               <li class="dropdown-item">
                 <%= link_to 'My profile', user_path(current_user) %>
               </li>
+               <li class="dropdown-item">
+                <%= link_to 'My favoritings', likes_user_path(current_user) %>
+              </li>
               <li class="dropdown-divider"></li>
               <li class="dropdown-item">
                 <%= link_to 'Logout', logout_path, method: :delete %>
